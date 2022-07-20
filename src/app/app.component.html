@@ -1,0 +1,140 @@
+<div class="sidebar">
+    <div class="logo_details" style="text-align: center;">
+        <i style="color: aliceblue;font-size: 40px;" class="bx bxl-spring-boot"></i>
+        <i style="color: aliceblue;font-size: 40px;" class="bx bxl-angular"></i>
+        <i style="color: aliceblue;font-size: 40px;" class="bx bxl-postgresql"></i>
+        <!-- <span class="logo_name">AlphaCode</span> -->
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a href="">
+                <i class="bx bx-grid-alt"></i>
+                <span class="link_name">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="bx bx-table"></i>
+                <span class="link_name">Table</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="bx bx-list-ul"></i>
+                <span class="link_name">Order List</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="bx bx-pie-chart-alt-2"></i>
+                <span class="link_name">Analytics</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="bx bx-log-out"></i>
+                <span class="link_name">Log out</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<section class="home-section">
+    <nav>
+        <div class="sidebar-button">
+            <!-- <i class="bx bx-menu"></i> -->
+            <!-- <span class="dashboard">Dashboard</span> -->
+            <span class="logo_name">AlphaCode</span>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <i class="bx bx-search"></i>
+        </div>
+        <div class="profile-details">
+            <img src="https://phatamhay.com/wp-content/uploads/2019/10/portrait-square-05.jpg" alt="">
+            <span class="admin_name">LongKame</span>
+            <i class="bx bx-chevron-down"></i>
+        </div>
+    </nav>
+
+<div style="width: fit-content; margin: auto; margin-top: 20px;">
+    <button style="width: 80px; height: 50px;" type="button" class="btn btn-primary" (click)="openModal(add)">Add</button>
+</div>
+
+    <div class="sales-boxes">
+        <ag-grid-angular style="width: 100%; height: 500px;" class="ag-theme-balham" [rowData]="rowData"
+            [headerHeight]="80" [rowHeight]="80" [columnDefs]="columnDefs">
+        </ag-grid-angular>
+    </div>
+
+    <ng-template #add>
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">Update product</h4>
+            <button type="button" class="close pull-right" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="modal-body" style="width: 500px;">
+            <div class="form-group">
+                <label for="id">Name</label>
+                <input type="text" [(ngModel)] = "name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="image">Quantity</label>
+                <input type="text" [(ngModel)] = "quantity" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="name">Price</label>
+                <input type="text" [(ngModel)] = "price" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="name">Type</label>
+                <input type="text" [(ngModel)] = "id_Type"  class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Image</label>
+                <input type="text" [(ngModel)] = "image"  class="form-control">
+            </div>
+            <br>
+            <button type="button" class="btn btn-primary" (click)="addProduct()">Add</button>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" (click)="modalRef?.hide()">Close</button>
+        </div>
+    </ng-template>
+
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="#">1</a>
+        &nbsp;&nbsp;&nbsp;
+        <a class="active" href="#">2</a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="#">3</a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="#">4</a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="#">5</a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="#">6</a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="#">&raquo;</a>
+    </div>
+
+    <!-- <div class="sales-boxes-right"> -->
+
+    <!-- </div> -->
+
+</section>
+
+
+<div class="home-content">
+    <div class="overview-boxes">
+        <div class="box">
+            <div class="left-side">
+                <div class="box_topic"></div>
+            </div>
+        </div>
+    </div>
+</div>
